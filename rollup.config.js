@@ -2,14 +2,17 @@ import {rollup} from 'rollup';
 import babel from 'rollup-plugin-babel';
 
 const config = {
-    entry: './src/entry.js',
-    dest: 'static/bundle.js',
+    entry: './src/index.js',
+    dest: './lib/index.js',
     sourceMap: true,
-    format: 'umd',
+    format: 'cjs',
     plugins: [
         babel({
             exclude: 'node_modules/**'
         })
+    ],
+    globals: [
+        "styled-components"
     ]
 }
 
