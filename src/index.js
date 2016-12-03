@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {css, injectGlobal} from 'styled-components'
 
 const sizes = {
     1: 4.66666666667,
@@ -27,9 +27,9 @@ export const breakpoints = {
     desktophd: "1200px"
 }
 
-export const breakpoint = label => (...args) => styled.css`
+export const breakpoint = label => (...args) => css`
     @media (min-width: ${breakpoints[label] || label}) {
-        ${styled.css(...args)}
+        ${css(...args)}
     }
 `
 
@@ -47,7 +47,7 @@ export default function setupSkeleton(opts) {
 
     } = opts || {}
 
-    styled.injectGlobal()
+    injectGlobal()
 }
 
 export const Container = styled.div`
@@ -69,7 +69,7 @@ export const Container = styled.div`
     `}
 `
 
-export const Colum = styled.div`
+export const Column = styled.div`
     width: 100%;
     float: left;
     box-sizing: border-box;
