@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "peerDependencies": {
+    "styled-components": "^1.1.2"
+  },
+  "scripts": {
+    "prepublish": "babel --out-dir lib src"
+  },
+  "name": "react-skeleton",
+  "version": "1.0.0",
+  "description": "React-Skeleton - Skeleton CSS in React components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/styled-components/styled-components.git"
+  },
+  "author": "yogurt1 <stalinswag1@gmail.com>",
+  "license": "MIT"
+}
