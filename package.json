@@ -12,7 +12,7 @@
     "prepublish": "npm run build"
   },
   "name": "react-styled-skeleton",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "React-Skeleton - Skeleton CSS in React components",
   "main": "index.js",
   "repository": {
