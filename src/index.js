@@ -1,10 +1,6 @@
 import styled, {css, injectGlobal} from 'styled-components'
 
 const styles = {
-    all: Object.keys(this)
-        .filter(s => s !== 'all' && s !== 'normalize')
-        .map(s => styles[s])
-        .join(),
     base: `
         html {
           font-size: 62.5%; }
@@ -117,6 +113,11 @@ const styles = {
           margin-bottom: 1rem; }
     `
 }
+
+styles['all'] = Object.keys(styles)
+    .filter(s => s !== 'all' && s !== 'normalize')
+    .map(s => styles[s])
+    .join()
 
 const sizes = {
     1: 4.66666666667,
