@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 const sizes = {
     1: 4.66666666667,
     2: 13.3333333333,
@@ -68,7 +69,7 @@ export const Container = styled.div`
     `}
 `
 
-export const Col = styled.div`
+export const Colum = styled.div`
     width: 100%;
     float: left;
     box-sizing: border-box;
