@@ -7,16 +7,17 @@
     "styled-components": "^1.1.2"
   },
   "scripts": {
-    "prepublish": "babel --out-dir lib src"
+    "build": "babel --out-dir lib src",
+    "prepublish": "npm run build"
   },
   "name": "react-skeleton",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React-Skeleton - Skeleton CSS in React components",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/styled-components/styled-components.git"
   },
-  "author": "yogurt1 <stalinswag1@gmail.com>",
+  "author": "yogurt1",
   "license": "MIT"
 }
