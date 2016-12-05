@@ -12,7 +12,8 @@ const config = {
         })
     ],
     globals: [
-        "styled-components"
+        "styled-components",
+        "react"
     ]
 }
 

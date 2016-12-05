@@ -1,4 +1,5 @@
 import styled, {css, injectGlobal} from 'styled-components'
+import {createElement} from 'react'
 
 const styles = {
     base: `
@@ -209,16 +210,29 @@ export const Column = styled.div`
     box-sizing: border-box;
 
     @media (min-width: ${breakpoints.phablet}) {
-        margin-left: ${p => p.count === 12 ? 0 : '4%'};
-        width: ${p => sizes[p.count || 1]}%;
+        margin-left: ${p => p.size === 12 ? 0 : '4%'};
+        width: ${p => sizes[p.size || 1]}%;
         &:first-child {
             margin-left: 0;
         }
     }
 `
 
+export const Grid = ({size, children}) => createElement(
+    Row, children.map((c, key) =>
+        createElement(Column, {key}, [c])
+    )
+)
+
 export const OffestBy = styled.div`
     margin-left: ${p => offsets[p.count||1]}%;
+`
+
+export const Breakpoint = styled.div`
+    display: none;
+    @media (min-width: ${p => breakpoints[p.breakpoint]}) {
+        display: block;
+    }
 `
 
 // Browser only

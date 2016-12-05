@@ -7,12 +7,16 @@
     "rollup-plugin-babel": "^2.6.1",
     "styled-components": "^1.1.2"
   },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0-0",
+    "styled-components": "^1.1.2"
+  },
   "scripts": {
     "build": "rollup -c",
     "prepublish": "npm run build"
   },
   "name": "react-styled-skeleton",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React-Skeleton - Skeleton CSS in React components",
   "main": "index.js",
   "repository": {
