@@ -219,10 +219,8 @@ export const Column = styled.div`
 `
 
 export const Grid = ({size, children}) => createElement(
-    Row, children.map((c, key) =>
-        createElement(Column, {key}, [c])
-    )
-)
+    Row, null, children.map((child, key) =>
+        createElement(Column, {key}, child)))
 
 export const OffestBy = styled.div`
     margin-left: ${p => offsets[p.count||1]}%;
